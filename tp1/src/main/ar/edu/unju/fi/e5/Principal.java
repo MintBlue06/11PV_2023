@@ -12,20 +12,35 @@ public class Principal {
         byte radio = scanner.nextByte();
 
         scanner.close();*/
+        //Principal principal = new Principal();
 
-        double area = area(radio);
-
-        System.out.println("Area del circulo: " + area);
-
-    }
-
-    public static double area(byte radio) {
+        //Principal.calcularArea( );
+        //double area = area(radio);
 
         Scanner scanner = new Scanner( System.in);
 
         System.out.println("Radio de un circulo: ");
 
-        radio = scanner.nextByte();
+        byte radio = scanner.nextByte();
+
+        scanner.close();
+
+        double area = (radio * radio) * Math.PI;
+
+        System.out.println("Area del circulo: " + area);
+
+    }
+
+    /*public void calcularArea() {
+    }*/
+
+    /*public static double calcularArea() {
+
+        Scanner scanner = new Scanner( System.in);
+
+        System.out.println("Radio de un circulo: ");
+
+        byte radio = scanner.nextByte();
 
         scanner.close();
 
@@ -34,5 +49,5 @@ public class Principal {
         double area = (radio * radio) * Math.PI;
 
         return area;
-    }
+    }*/
 }
