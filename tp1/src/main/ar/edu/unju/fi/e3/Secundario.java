@@ -8,7 +8,7 @@ public class Secundario {
         System.out.println("Resultado = " + resultado);
         
     }
-
+    
     public static double dividir(float numero1, float numero2) {
 
         double resultado = numero1 / numero2;
