@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Secundario {
     
-    public static void main(String[] args, double area) {
+    public static void main(String[] args) {
         /*Scanner scanner = new Scanner( System.in);
 
         System.out.println("Radio de un circulo: ");
@@ -17,15 +17,15 @@ public class Secundario {
 
         Secundario secundario = new Secundario();
 
-        //double area;
+        //final double area;
 
         secundario.calcularArea();
         //double areaCalculada = area;
         
-        System.out.println("Area del circulo: " + area);
+        //System.out.println("Area del circulo: " + area);
     }
 
-    public double calcularArea() {
+    public void calcularArea() {
 
         Scanner scanner = new Scanner( System.in);
 
@@ -37,8 +37,8 @@ public class Secundario {
 
         double area = (radio * radio) * Math.PI;
 
-        return area;
-        
+        //return area;
+        System.out.println("Area del circulo: " + area);
     }
 
 }
