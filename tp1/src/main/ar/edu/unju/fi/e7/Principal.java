@@ -1,12 +1,12 @@
 package main.ar.edu.unju.fi.e7;
-//Falta terminar
+//*Se va a pedir un nro, luego va a calcular su factorial y a mostrarlo a continuacion*/
 import java.util.Scanner;
 
 public class Principal {
 
     private static int numero;
 
-    private static int factorial;
+    private static int factorial = 1;
     public static void main(String[] args) {
         
         Principal principal = new Principal();
@@ -15,11 +15,6 @@ public class Principal {
 
         principal.factorialDelNumero( numero);
 
-        /*for (int i = 0; i < 10; i++) {
-            
-            System.out.printf("Factorial de %d: . Iterativo: %d", i, factorial);
-            System.out.println(".()");
-        }*/
         System.out.println("Factorial de " + numero + ": "+ factorial);
     }
     public void conseguirNumero() {
@@ -34,39 +29,23 @@ public class Principal {
     }
 
     public int factorialDelNumero(int numero) {
-
-        //if (numero <= 0) {
-
-           
-        //}
-
-        //return 1;
-
-        if (numero <= 0) {
-
-            if (numero < 0) {}
+        //si el numero es menor a cero, lo vamos a tratar con un Z+ (entero positivo)
+        if (numero < 0) //{}
 
             numero *= -1;
-            //return 1;
+            //System.out.println("El numero ingresado debe ser mayor o igual a 0");
 
-       } else {
-
-        return 1;
-        //numero *= -1;
-        }
-
+        //si el numero es menor o igual a cero, devuelve 1
+        if (numero <= 0) //{}
         
-        //numero *= -1;
+            return 1;
         
-        factorial = 1;
         while (numero > 1) {
-            
+        //mientras el numero sea mayor a 1, se va a multiplicar el factorial por el numero
             factorial *= numero;
-
+            //y luego se va a reducir el numero en 1 unidad
             numero--;
-
         }
         return factorial;
-
     }
 }
