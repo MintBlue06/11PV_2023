@@ -30,7 +30,6 @@ public class Principal {
         numero = scanner.nextByte(); //introduce el numero
         scanner.close(); //cierra el scanner
     }
-    //FIXME No sale de estructura de control
     public void multiplicarNumero(byte numero, byte multiplicador) {
         /**
          * Mientras el 'numero' sea menor o igual a 9 y mayor o igual a 1
@@ -49,6 +48,8 @@ public class Principal {
                 System.out.println(numero + " * " + multiplicador + " = " + producto);
                 multiplicador++; //al 'multiplicador' se le suma 1
             }
+        System.out.println("Tabla de multiplicar finalizada");
+        numero = 10; //el 'numero' elegido se vuelve 10 para finalizar la estructura 
         }
     }
 }
