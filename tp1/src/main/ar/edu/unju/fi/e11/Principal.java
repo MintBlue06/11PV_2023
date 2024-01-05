@@ -1,7 +1,7 @@
 package main.ar.edu.unju.fi.e11;
 
 import java.util.Scanner;
-
+//Hice lo que pude, este ejercicio se puede corregir
 /**
  * @author Alvarez Carlos Matias
  * @since 25/12/23
@@ -37,8 +37,6 @@ public class Principal {
      *  segun el caso se va a nombrar el mes. Ej: 1 = "Enero".
      * En caso contrario aparece un mensaje de error por 'default'
      */
-    //FIXME El 'numero' te lo deberia volver a pedir la maquina
-    //Falta terminar! podria haber una funcion comprobarMes() tambien
     public void comprobarNumero(short numero) {
         //ingresarNumero();
         String mes = ""; //se va a usar para establecer el mes en el mensaje

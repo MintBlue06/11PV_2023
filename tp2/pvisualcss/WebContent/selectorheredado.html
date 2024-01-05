@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Child Selector</title>
+		<style>
+		
+			/* cualquier elemento article que sea hijo directo de un elemento section. */
+			section > article {
+			  color: green;
+			  font-size: 24px;
+			}
+			
+			/* cualquier elemento h2 el cual sea hijo directo de un elemento section . */
+			section > h2 {
+			  color: green;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<h1>Selector heredado</h1>
+		<section>
+		  <h2>Sub encabezado 1</h2>
+		  <div>
+		    <article>ARTICLE dentro de un DIV, el cual está dentro de un SECTION</article>
+		  </div>
+		</section>
+		<section>
+		  <article>ARTICLE es un hijo directo del elemento SECTION.</article>
+		</section>
+		<h2>Sub encabezado 2</h2>
+	
+	</body>
+</html>
