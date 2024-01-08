@@ -18,22 +18,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
-    <p>
-        <img src="images/pets-3715733_1920.jpg" width="1920" 
-            height="1280" alt="Mascotas">
-            <!--Google recomienda colocar imagenes
-                 dentro del directorio del index.html-->
-            <!--No se recomienda el atributo 'title' dentro de la etiqueta <img>
-                 por problemas de accesibilidad-->
-    </p>
 </head>
 <body>
+    <p>
+        <img src="images/pets-3715733_1920.jpg" width="1920"
+            height="1280" alt="Mascotas">
+        <!--Google recomienda colocar imagenes
+            dentro del directorio del index.html-->
+        <!--No se recomienda el atributo 'title' dentro de la etiqueta <img>
+            por problemas de accesibilidad-->
+    </p>
     <header>
         <h1>Tienda de Articulos de Mascota</h1>
     </header>
     <nav>
         <ul>
-            <li><a></a></li>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+        <ul>
+            <li><a>Productos</a></li><!--agregar otro html-->
+        </ul>
+        <ul>
+            <li><a>Consejos de salud</a></li><!--agregar otro html-->
+        </ul>
+        <ul>
+            <li><a>Servicio de paseos</a></li><!--agregar otro html-->
+        </ul>
+        <ul>
+            <li><a>Sucursales</a></li><!--agregar otro html-->
+        </ul>
+        <ul>
+            <li><a>Contactanos</a></li><!--section a tener en ceunta-->
         </ul>
     </nav>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="user_email">
+            </li>
+            <li>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Enviar mensaje</button>
+            </li>
+        </ul>
+    </form>
 </body>
