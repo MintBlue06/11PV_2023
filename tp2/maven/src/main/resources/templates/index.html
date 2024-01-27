@@ -13,16 +13,20 @@
  Fecha: 6/1/2024
 -->
 <!DOCTYPE html>
+<!--idioma de pagina-->
 <html lang='es'>
 <head>
     <!--links de css-->
     <link rel="stylesheet" src="styles/normalize.css">
+    <link rel="stylesheet" src="styles/main.css">
     <meta charset="UTF-8">
+    <!--opcion para pagina responsiva (adaptable)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
 </head>
 <body>
     <p>
+        <!--imagen principal-->
         <img src="images/pets-3715733_1920.jpg" width="1920"
             height="1280" alt="Mascotas">
         <!--Google recomienda colocar imagenes
@@ -33,7 +37,8 @@
     <header>
         <h1>Tienda de Articulos de Mascota</h1>
     </header>
-    <nav><!--barra de navegacion principal-->
+    <!--barra de navegacion principal-->
+    <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
         </ul>
@@ -50,11 +55,13 @@
             <li><a href="branch.html">Sucursales</a></li>
         </ul>
         <ul>
-            <li><a href="#form">Contactanos</a></li><!--enlace a id="form"-->
+            <!--enlace a id="form"-->
+            <li><a href="#form">Contactanos</a></li>
         </ul>
     </nav>
     <section>
-        <article><!--articulo objetivo de la empresa-->
+        <!--articulo objetivo de la empresa-->
+        <article>
             <h2>Objetivos de la empresa</h2>
             <p>Contribuir a crear un mundo mejor para nosotros y
                 nuestras amadas mascotas. Proporcionar un ambiente seguro
@@ -76,10 +83,10 @@
         <!--redes sociales espacio-->
         <h3>Nuestras redes</h3>
         <!--noopener acompaña a _blank por seguridad-->
-        <a href="" target="_blank" rel="noopener"><img src="images/instagram.svg" alt="Imagen de Instagram"></a>
+        <a href="" target="_blank" rel="noopener"><img class="icon" src="images/instagram.svg" alt="Imagen de Instagram"></a>
         <h3>Escribinos</h3>
         <!--https://wa.me/54 codigo valido para Argentina-->
-        <a href="https://wa.me/54" target="_blank" rel="noopener"><img src="images/whatsapp.svg" alt="Imagen de Whatsapp"></a>
+        <a href="https://wa.me/54" target="_blank" rel="noopener"><img class="icon" src="images/whatsapp.svg" alt="Imagen de Whatsapp"></a>
     </aside>
     <form action="/my-handling-form-page" method="post" id="form">
         <h3>Contactanos</h3>
@@ -102,6 +109,7 @@
         </ul>
     </form>
     <footer>
+        <!--propiedad y diseño de:-->
         <p>Copyright 2023 - Tienda de Articulos de Mascota </p>
         <p>Diseñado por Alvarez Carlos Matias - Jujuy - Argentina</p>
     </footer>
