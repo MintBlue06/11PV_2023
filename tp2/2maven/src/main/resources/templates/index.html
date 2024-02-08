@@ -1,0 +1,118 @@
+<!--Esta parte debe incluir:
+ <head> con titulo <h1>
+  y una imagen (<img> debe incluir src, alt y title)
+ <nav> incluye lista <ul> con cada item como enlace (<a>)
+  que redirige a: Inicio, Productos, Consejos de salud,
+   Servicio de paseos, Sucursales, Contactanos
+ <section>
+ <aside>
+ <footer>
+-->
+<!--Projecto web: Tienda de articulos de mascota
+ Autor: Alvarez Carlos Matias
+ Fecha: 6/1/2024
+-->
+<!DOCTYPE html>
+<!--idioma de pagina-->
+<html lang='es'>
+<head>
+    <meta charset="UTF-8">
+    <!--opcion para pagina responsiva (adaptable)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <!--links de css-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <p>
+        <!--imagen principal-->
+        <img class="banner" src="images/pets-3715733_1920.jpg" width="1920"
+            height="1280" alt="Mascotas">
+        <!--Google recomienda colocar imagenes
+            dentro del directorio del index.html-->
+        <!--No se recomienda el atributo 'title' dentro de la etiqueta <img>
+            por problemas de accesibilidad-->
+    </p>
+    <header>
+        <h1>Tienda de Articulos de Mascota</h1>
+    </header>
+    <!--barra de navegacion principal-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+        <ul>
+            <li><a href="product.html">Productos</a></li>
+        </ul>
+        <ul>
+            <li><a href="tip.html">Consejos de salud</a></li>
+        </ul>
+        <ul>
+            <li><a href="service.html">Servicio de paseos</a></li>
+        </ul>
+        <ul>
+            <li><a href="branch.html">Sucursales</a></li>
+        </ul>
+        <ul>
+            <!--enlace a id="form"-->
+            <li><a href="#form">Contactanos</a></li>
+        </ul>
+    </nav>
+    <section>
+        <!--articulo objetivo de la empresa-->
+        <article>
+            <h2>Objetivos de la empresa</h2>
+            <p>Contribuir a crear un mundo mejor para nosotros y
+                nuestras amadas mascotas. Proporcionar un ambiente seguro
+                y confortable. Ofrecer productos y servicios con
+                buena calidad a un precio competitivo.
+            </p>
+        </article>
+    </section>
+    <aside><!--comentarios y redes sociales-->
+        <h2>Comentarios</h2>
+        <blockquote>
+            <p>"Buena atencion"</p>
+            <footer>Cristina Bonilla</footer>
+        </blockquote>
+        <blockquote>
+            <p>"Precios copados"</p>
+            <footer>Julian Aguilar</footer>
+        </blockquote>
+        <!--redes sociales espacio-->
+        <h3>Nuestras redes</h3>
+        <!--noopener acompaña a _blank por seguridad-->
+        <a href="" target="_blank" rel="noopener"><img class="icon" src="images/instagram.svg" alt="Imagen de Instagram"></a>
+        <h3>Escribinos</h3>
+        <!--https://wa.me/54 codigo valido para Argentina-->
+        <a href="https://wa.me/54" target="_blank" rel="noopener"><img class="icon" src="images/whatsapp.svg" alt="Imagen de Whatsapp"></a>
+    </aside>
+    <form action="/my-handling-form-page" method="post" id="form">
+        <h3>Contactanos</h3>
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="user_email">
+            </li>
+            <li>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Enviar mensaje</button>
+            </li>
+        </ul>
+    </form>
+    <footer>
+        <!--propiedad y diseño de:-->
+        <p>Copyright 2023 - Tienda de Articulos de Mascota </p>
+        <p>Diseñado por Alvarez Carlos Matias - Jujuy - Argentina</p>
+    </footer>
+    <!--<script></script> Va al final por si aparece Javascript-->
+</body>
+</html>
