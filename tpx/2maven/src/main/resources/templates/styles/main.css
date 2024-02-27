@@ -1,0 +1,45 @@
+* {
+    margin: Opx;
+    padding: 0px;
+}
+body {
+    /*Color de fondo*/
+    background-color:  #FF9999;
+    /*Contenedor flexible*/
+    display: flex;
+    /*flex-direction y flex-wrap*/
+    flex-flow: column wrap;
+    /*Alineacion al centro del eje*/
+    justify-content: center;
+    /*Alineacion al inicio del eje secundario*/ 
+    align-items: flex-start;
+    /*Fuente*/
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+}
+/*Colores de enlaces*/
+a { /*Predeterminado*/
+    color:  #0033FF;
+}
+a:active { /*Enlace seleccionado o activo*/
+    color:  #FF0000; 
+}
+a:visited { /*Enlace ya visitado*/
+    color:  #6633FF; 
+}
+.banner {
+    width: 100%;
+    height: 900px;
+    justify-content: center;
+    object-fit: cover;
+    object-position: center;
+}
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+/*Componente*/
+/*.persona-de-palito{}*/
+/*Elemento*/
+/*.persona-de-palito__brazo(o cabeza,pie){}*/
+/*Modificador*/
+/*.persona-de-palito--azul(o rojo)*/

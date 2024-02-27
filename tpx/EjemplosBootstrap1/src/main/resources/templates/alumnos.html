@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es"
+	  xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>Sistema</title>
+    <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link th:rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}"/>
+  </head>
+  <body>
+    
+    <div class="container">
+		<h1 th:text="#{alumnos.saludo}"></h1>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link active" id="home-formulario" data-bs-toggle="tab" data-bs-target="#formulario-tab-pane"
+		    		type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Formulario</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+		    		type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Listado</button>
+		  </li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade show active" id="formulario-tab-pane" role="tabpanel" aria-labelledby="home-formularo" tabindex="0">
+			  <div class="card">
+				  <div class="card-header">
+				    Registro de un nuevo Alumno
+				  </div>
+				  <div class="card-body">
+				    <form th:object="${alumnoForm}" th:action="@{/saveForm}" autocomplete="off" method="post">
+						<div class="mb-3 row">
+						  <label for="txtApellido" class="col-sm-2 col-form-label">Apellido</label>
+						  <div class="col-sm-10">
+							  <input type="text" class="form-control" id="txtApellido" placeholder="Ingrese apellido"
+							  		 th:field="${alumnoForm.apellido}">
+							  <smal class="form-text text-danger" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"/>
+						  </div>  
+						</div>
+						<div class="mb-3 row">
+						  <label for="txtNombres" class="col-sm-2 col-form-label">Nombres</label>
+						  <div class="col-sm-10">
+							  <input type="text" class="form-control" id="txtNombres" placeholder="Ingrese nombre"
+							  		 th:field="${alumnoForm.nombres}">
+							  <smal class="form-text text-danger" th:if="${#fields.hasErrors('nombres')}" th:errors="*{nombres}"/>
+						  </div>  
+						</div>
+						<div class="mb-3 row">
+						  <label for="txtDNI" class="col-sm-2 col-form-label">DNI</label>
+						  <div class="col-sm-10">
+							  <input type="number" class="form-control" id="txtDNI" placeholder="Ingrese DNI"
+							  		 maxlength="8"  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+							  		 th:field="${alumnoForm.dni}"
+							  		 step="any">
+							  <smal class="form-text text-danger" th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}"/>
+						  </div>  
+						</div>
+						<div class="mb-3 row">
+						  <label for="txtFecha" class="col-sm-2 col-form-label">Fecha Nac.</label>
+						  <div class="col-sm-10">
+							  <input type="date" class="form-control" id="txtFecha" placeholder="Ingrese fecha nacimiento"
+							  		onkeydown="return false" 
+							  		th:field="${alumnoForm.fechaNacimiento}"
+							  		th:value="${#dates.format(alumnoForm.fechaNacimiento, 'yyyy-MM-dd')}">
+							  <smal class="form-text text-danger" th:if="${#fields.hasErrors('fechaNacimiento')}" th:errors="*{fechaNacimiento}"/>
+						  </div>  
+						</div>
+						<div class="mb-3 row">
+							<div class="col-sm-12 text-center">
+								<a class="btn btn-secondary">Cancelar</a>
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+										data-bs-target="#modalSaveAlumno">
+								  Registrar Alumno
+								</button>
+							</div> 
+						</div>
+						
+						
+						<!-- Modal -->
+						<div class="modal fade" id="modalSaveAlumno" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana de Confirmación</h1>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        ¿Confirma la operación?
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						        <input type="submit" class="btn btn-primary" value="Confirmar guardar">
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						
+						
+						
+						
+					</form>
+				  </div>
+			   </div>
+		  </div>
+		  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+		  
+		</div>
+	</div>
+	
+	
+	
+		
+	
+	
+	
+	<!--Configuración para usar bootstrap js-->
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  </body>
+</html>
+

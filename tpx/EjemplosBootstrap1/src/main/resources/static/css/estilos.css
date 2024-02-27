@@ -1,0 +1,36 @@
+/*----Quitar deslizadores al número-------------------*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/*----------------------------------------
+SOBREESCRIBIENDO  LOS ESTILOS DE BOOTSTRAP
+------------------------------------------*/
+.bg-primary {
+  background-color: #ff401c !important; }
+
+.text-primary {
+  color: #ff401c !important; }
+
+.btn-primary {
+  background-color: #ff401c !important;
+  border-color: #b51d00 !important; }
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e82500 !important; }
+
+.btn-primary:active {
+  background-color: #b51d00 !important;
+  border-color: #821500 !important; }
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 64, 28, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(255, 64, 28, 0.5) !important; }
+
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px #0c0c0c3b;
+          box-shadow: 0 0 10px #0c0c0c3b; }
