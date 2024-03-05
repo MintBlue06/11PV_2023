@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
 //como modifico un setter con lombok?
+//para unir dos componentes podemos usar el DTO como buena practica
 @Component
 public class Product {
     private Integer id;
@@ -43,6 +44,8 @@ public class Product {
         this.price = price;
         this.discount = discount;
     }
+    public Product() {
+    }
     public Integer getId() {
         return id;
     }
@@ -67,12 +70,12 @@ public class Product {
     public void setImage(String image) {
         this.image = image;
     }
-    /*public Category getCategory() {
+    public Category getCategory() {
         return category;
     }
     public void setCategory(Category category) {
         this.category = category;
-    }*/
+    }
     public int getPrice() {
         return price;
     }
